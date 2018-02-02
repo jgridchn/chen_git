@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="347" started-at="2017-07-20T09:37:35Z" finished-at="2017-07-20T09:37:36Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="347" started-at="2017-07-20T09:37:35Z" finished-at="2017-07-20T09:37:36Z">
+      <class name="interface_login.login_test">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:interface_login.login_test@58c1670b]" name="Login" duration-ms="121" started-at="2017-07-20T17:37:36Z" data-provider="dp" finished-at="2017-07-20T17:37:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8888]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:interface_login.login_test@58c1670b]" name="Login" duration-ms="16" started-at="2017-07-20T17:37:36Z" data-provider="dp" finished-at="2017-07-20T17:37:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[444]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:interface_login.login_test@58c1670b]" name="Login" duration-ms="7" started-at="2017-07-20T17:37:36Z" data-provider="dp" finished-at="2017-07-20T17:37:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1231]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:interface_login.login_test@58c1670b]" name="Login" duration-ms="11" started-at="2017-07-20T17:37:36Z" data-provider="dp" finished-at="2017-07-20T17:37:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6666]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+      </class> <!-- interface_login.login_test -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

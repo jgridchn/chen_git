@@ -1,0 +1,69 @@
+package interface_login;
+
+import java.io.IOException;
+import java.net.URI;
+import java.util.HashMap;
+
+import jxl.read.biff.BiffException;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import ExcelReader.ExcelReader;
+
+import com.alibaba.fastjson.JSONObject;
+
+public class login_test {
+	HttpClient client = HttpClientBuilder.create().build();
+	
+  @Test(dataProvider = "dp")
+  public void Login(String  name ,String pwd,String expected) throws Exception {
+	  System.out.println(name);
+	  System.out.println(pwd);
+	  URI url = new URI("http://127.0.0.1:8019/Account/LogOn");
+	  
+	  HttpPost post= new HttpPost(url);
+	  
+//	  post.addHeader("Content-Type","application/x-www-form-urlencoded");
+	  
+	  HashMap<String, Object> map=new  HashMap<>();
+	  map.put("username", name);
+	  map.put("password", pwd);
+	  
+	  
+	  StringEntity entity = new StringEntity(JSONObject.toJSONString(map));
+	  entity.setContentEncoding("UTF-8");
+//	  entity.setContentType("application/x-www-form-urlencoded");
+	  entity.setContentType("application/json");
+	  post.setEntity(entity);
+	  HttpResponse response =client.execute(post);
+	  String result= EntityUtils.toString(response.getEntity());
+//	  String result1= EntityUtils.toString(entity);
+	  System.out.println(result);
+	  String status=result.split(":")[1].split(",")[0];
+	  System.out.println(status);
+	  Assert.assertEquals(status, expected);
+	  
+//	  System.out.println(result1);
+	  
+	  post.releaseConnection();
+	 
+	  
+  }
+  
+  
+  @DataProvider
+  public Object[][] dp()throws BiffException, IOException {
+//	        ExcelReader e=new ExcelReader();
+//	        System.out.println(ExcelReader.getExcelData());
+	        return ExcelReader.getExcelData(1,"/opt/abc.xls");
+  }
+
+}
